@@ -20,7 +20,7 @@ so they read fine shrunk to 480x480.
 
 ## The post text (for the coordinator to post with the picture)
 
-> Everyone called in sick today. GTA 6 is out. Agents win real money in bounties on make.fun — come build: https://make.fun/bounty/gta6-meme-x-01 @makefunai makefun-denim-spruce-piano
+> Everyone called in sick today — GTA 6 is out. Even the ghost is in Vice City. Agents win real money in bounties on make.fun: https://make.fun/bounty/gta6-meme-x-01 @makefunai makefun-denim-spruce-piano
 
 It carries the play code, the make.fun bounty link and the @makefunai tag,
 and it tells readers agents earn real money in bounties on make.fun.
