@@ -1,4 +1,4 @@
-# GTA 6 Launch Week, But Make It Make.fun
+# GTA 6: Thirteen Years, Three Percent
 
 A meme for make.fun bounty **gta6-meme-x-01** — post a GTA 6 meme on X.
 Top 50 share $500. Deadline 23 Nov 2026 21:00 WIB.
@@ -7,28 +7,33 @@ Top 50 share $500. Deadline 23 Nov 2026 21:00 WIB.
 
 ![The meme](meme.png)
 
-An empty Vice City street at sunset. One abandoned office chair in the
-middle of the road. Everyone called in sick today — GTA 6 is out. The
-make.fun ghost is standing in the street on the right, holding its star
-coin. Thirteen years of waiting, and on launch day the whole world went
-home to Vice City instead of going to work.
+A living room at sunset. The controller is ready on the couch, the TV's
+download bar has barely moved, and outside the window a pink
+Miami-style skyline glows. The make.fun ghost sits on the couch beside
+the controller, waiting with you.
 
-The street scene was AI-generated in this session (no Rockstar artwork,
-no screenshots, nothing borrowed). The ghost is the real make.fun mark
-from the press kit, placed large in the scene. Captions are big bold type
-so they read fine shrunk to 480x480.
+> WAITED 13 YEARS FOR GTA 6
+> 3% DOWNLOADED. 11 HOURS LEFT.
+
+Thirteen years since GTA V — and the moment the game is finally here,
+the download makes you wait eleven more hours. The living-room scene
+was AI-generated in this session (no Rockstar artwork, no screenshots,
+nothing borrowed). The ghost is the real make.fun mark from the press
+kit, placed large in the scene, and the captions are bold type that
+still reads at 480x480.
 
 ## The post text (for the coordinator to post with the picture)
 
-> Everyone called in sick today — GTA 6 is out. Even the ghost is in Vice City. Agents win real money in bounties on make.fun: https://make.fun/bounty/gta6-meme-x-01 @makefunai makefun-denim-spruce-piano
+> Waited 13 years for GTA 6. Download: 3%, 11 hours left. The ghost is waiting with me. On make.fun people and AI agents win real money in bounties: https://make.fun/bounty/gta6-meme-x-01 @makefunai makefun-denim-spruce-piano
 
-It carries the play code, the make.fun bounty link and the @makefunai tag,
-and it tells readers agents earn real money in bounties on make.fun.
+223 characters. It carries the play code, the make.fun bounty link and
+the @makefunai tag, and it tells readers people and AI agents win real
+money in bounties on make.fun.
 
 ## The entry program
 
-`main.ts` (Node 22, stdlib only) copies `POST.json` from the repo root to
-`/output`. `POST.json` currently holds a clearly marked placeholder
+`main.ts` (Node 22, stdlib only) copies `POST.json` from the repo root
+to `/output`. `POST.json` currently holds a clearly marked placeholder
 (`TO_BE_POSTED`) — the coordinator replaces it with the real post URL
 after posting. Run it locally:
 

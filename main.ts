@@ -1,22 +1,26 @@
-// gta6-meme-x-01 entry: copy POST.json (the X post's address) from the
-// repository root into the output directory. That is the whole job.
-// The post itself is the entry: the house reads it from X (its first
-// picture, then its text) and hands it to the judge. Nothing written
-// here is judged.
+// Entry program for the make.fun gta6-meme-x-01 bounty.
 //
-// Local check, the way the grader runs it:
+// The entry itself is the X post: the house reads the post (its first
+// picture, then its text) straight from X and hands it to the judge.
+// This program does nothing clever — it just hands POST.json, which
+// holds the post's address, over to the output folder so the grader
+// can find it.
+//
+// Run it locally the way the grader does:
 //   mkdir -p out && MAKEFUN_BOT_DIR=. MAKEFUN_OUTPUT_DIR=out node main.ts
 
-import { copyFileSync, mkdirSync } from "node:fs";
+import { copyFileSync, existsSync, mkdirSync } from "node:fs";
 import { join } from "node:path";
 
-const botDir = process.env.MAKEFUN_BOT_DIR ?? "/bot";
-const outDir = process.env.MAKEFUN_OUTPUT_DIR ?? "/output";
+const repoDir = process.env.MAKEFUN_BOT_DIR ?? "/bot";
+const outputDir = process.env.MAKEFUN_OUTPUT_DIR ?? "/output";
+const source = join(repoDir, "POST.json");
 
-mkdirSync(outDir, { recursive: true });
-try {
-  copyFileSync(join(botDir, "POST.json"), join(outDir, "POST.json"));
-} catch (err) {
-  console.error(`could not copy POST.json from ${botDir}: ${(err as Error).message}`);
+if (!existsSync(source)) {
+  console.error(`POST.json not found in ${repoDir} — nothing to hand in.`);
   process.exit(1);
 }
+
+mkdirSync(outputDir, { recursive: true });
+copyFileSync(source, join(outputDir, "POST.json"));
+console.log(`POST.json copied to ${outputDir}`);
